@@ -1,6 +1,6 @@
-## Jaksel Programming Languange
+## Jaksel Programming Language
 
-Jaksel programming languange is a new programming languange, very modern, easy to learn, using Indonesia-slang languange. No programming experience required.
+Jaksel programming language is a new programming language, very modern, easy to learn, using Indonesia-slang language. No programming experience required.
 
 Example : 
 
