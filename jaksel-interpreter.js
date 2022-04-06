@@ -147,7 +147,7 @@ const loopFor = (msg) => {
   if(!match) return null;
   
   return {
-    exp: `for(let ${match[1]} = 0; i <= ${match[2]}; i++)`,
+    exp: `for(let ${match[1]} = 0; ${match[1]} <= ${match[2]}; ${match[1]}++)`,
     openGroup: true
   }
 }
