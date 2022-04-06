@@ -88,6 +88,9 @@ const booleanValue = (msg) => {
   if(msg.match(/positive vibes$/)){
     return 'true'
   }
+  if(msg.match(/worth it$/)){
+    return 'true'
+  }
   if(msg.match(/negative vibes$/)){
     return 'false'
   }
