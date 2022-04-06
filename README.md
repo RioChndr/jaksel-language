@@ -42,7 +42,7 @@ udahan
 Required nodejs
 
 ```
-node jaksel-interpreter.js ./jaksel
+node jaksel-interpreter.js ./example/example2.jaksel
 ```
 
 ## Command
