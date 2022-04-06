@@ -45,7 +45,7 @@ udahan
 - `kalogak` = `else`
 - `udahan` = close branch
 - `worth it` = true
-- `seriously ... itu ...` = `let a = b`
+- `seriously ... itu ...` = `const a = b`
 
 ## Run
 
