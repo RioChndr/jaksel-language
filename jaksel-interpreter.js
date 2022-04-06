@@ -21,6 +21,7 @@ function getCmd(cmdLines){
   let parser = [
     varAssign,
     varReassign,
+    constAssign,
     consoleLog,
     conditionIf,
     conditionElse,
@@ -66,6 +67,16 @@ const varReassign = (msg) => {
 
   return {
     exp: `${match[1]} = ${valueTransform(match[2])};`
+  }
+}
+
+const constAssign = (msg) => {
+  let format = /seriously ([a-zA-Z0-9]+) itu ([^\[\]\(\)\n]+)/
+  let match = msg.match(format)
+  if(!match) return null;
+
+  return {
+    exp: `const ${match[1]} = ${valueTransform(match[2])};`
   }
 }
 
