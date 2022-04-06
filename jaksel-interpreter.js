@@ -41,8 +41,10 @@ function getCmd(cmdLines){
 
 let mapCompare = {
   'itu': ' == ',
-  'lebih gede': '>=',
-  'lebih kecil': ' <= '
+  'lebih gede': '>',
+  'lebih kecil': ' < ',
+  'lebih gede sama dengan': ' >= ',
+  'lebih kecil sama dengan': ' <= '
 }
 
 const isChild = (msg) => {
