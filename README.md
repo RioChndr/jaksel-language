@@ -44,6 +44,8 @@ udahan
 - `kalo ... ... ...` = `if`
 - `kalogak` = `else`
 - `udahan` = close branch
+- `worth it` = true
+- `seriously ... itu ...` = `let a = b`
 
 ## Run
 
