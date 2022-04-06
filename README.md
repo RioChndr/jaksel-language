@@ -20,6 +20,23 @@ udahan
 spill "Udahan ah"
 ```
 
+```
+literally jumlah itu 10
+spill "Jumlah: " + jumlah
+
+whichis jumlah itu 11
+spill "Jumlah: " + jumlah
+
+literally isHidup itu positive vibes
+spill "is hidup :" + isHidup
+
+fomo i endup 10
+  kalo i lebih gede 3
+    spill "loop ke " + i
+  udahan
+udahan
+```
+
 ## Command
 
 - `literally ... itu ...` = `let a = b`
