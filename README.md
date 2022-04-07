@@ -104,6 +104,8 @@ if(foo == "Hello world"){
 ```
 kalo foo lebih gede 3
   spill "its bigger than 3"
+perhaps foo itu 3
+  spill "foo is 3"
 kalogak
   spill "its smaller than 3"
 udahan
@@ -111,6 +113,8 @@ udahan
 // transform to
 if(foo > 3){
   console.log("its bigger than 3")
+} else if (foo == 3) {
+  console.log("foo is 3")
 } else {
   console.log("its smaller than 3")
 }
@@ -118,7 +122,7 @@ if(foo > 3){
 
 Comparison : 
 - `itu`: ' == ',
-- `lebih gede`: '>',
+- `lebih gede`: ' > ',
 - `lebih kecil`: ' < ',
 - `lebih gede sama dengan`: ' >= ',
 - `lebih kecil sama dengan`: ' <= '
