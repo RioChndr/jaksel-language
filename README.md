@@ -2,6 +2,17 @@
 
 Jaksel programming language is a new programming language, very modern, easy to learn, using Indonesia-slang language. No programming experience required.
 
+### Instalation & Run
+
+```bash
+npm install -g jaksel-language
+
+// run
+jaksel example/example1.jaksel
+```
+
+### Example 
+
 Example : 
 
 ```
@@ -35,14 +46,6 @@ fomo i endup 10
     spill "loop ke " + i
   udahan
 udahan
-```
-
-## Run
-
-Required nodejs
-
-```
-node jaksel-interpreter.js ./example/example2.jaksel
 ```
 
 ## Command
