@@ -5,7 +5,7 @@ const inputFile = () => {
   const args = process.argv;
   if (args.length < 3) throw "Require file args, ex: 'node jaksel-interpreter.js jaksel'";
   const exist = fs.existsSync(args[2]);
-  if (!exist) throw `File "${args[2]}" tidak dapat ditemukan, silahkan periksa file kembali`;
+  if (!exist) throw `File "${args[2]}" not found, please verify file location`;
   return args[2];
 };
 
