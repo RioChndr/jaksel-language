@@ -144,6 +144,16 @@ for (let i = 0; i < 10; i++) {
 }
 ```
 
+#### Procedure/Function with no parameter
+```
+so about my_story
+    literally umur itu 21
+    spill "Umur lu " + umur
+thats it sih
+
+call my_story
+```
+
 #### Disclaimer
 
 This project just for fun, I don't want to hurt anyone. Just from idea "what if jaksel language is a programming language" and make it true. This project only for education purpose, not for production ready.
