@@ -2,12 +2,12 @@
 const fs = require('fs');
 
 const inputFile = () => {
-  let args = process.argv
-  if(args.length < 3){
-    throw "Require file args, ex: 'node jaksel-interpreter.js jaksel'"
-  }
-  return args[2]
-}
+  const args = process.argv;
+  if (args.length < 3) throw "Require file args, ex: 'node jaksel-interpreter.js jaksel'";
+  const exist = fs.existsSync(args[2]);
+  if (!exist) throw `File "${args[2]}" tidak dapat ditemukan, silahkan periksa file kembali`;
+  return args[2];
+};
 
 const inputJaksel = fs.readFileSync(inputFile(), 'utf-8')
 
