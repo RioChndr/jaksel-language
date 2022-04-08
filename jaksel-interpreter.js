@@ -263,8 +263,6 @@ const execCmd = (cmds) => {
   if(isOpenGroup){
     resultCmds += ' }'
   }
-
-  console.log(resultCmds)
   
   eval(resultCmds)
 }
