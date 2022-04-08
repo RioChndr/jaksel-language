@@ -29,6 +29,9 @@ function getCmd(cmdLines){
     conditionElse,
     conditionClose,
     loopFor,
+    procedureDeclarationBegin,
+    procedureDeclarationEnd,
+    procedureCall
   ]
 
   return cmdLines.map((line) => {
@@ -180,6 +183,47 @@ const loopFor = (msg) => {
   return {
     exp: `for(let ${match[1]} = 0; ${match[1]} <= ${match[2]}; ${match[1]}++)`,
     openGroup: true
+  }
+}
+
+/**
+ * @param msg {string}
+ * note: procedure name must be alphabet followed by optional alphanumeric [A-Za-z0-9] or underscore (_)
+ */
+const procedureDeclarationBegin = (msg) => {
+  let format = /so about (\w+)/
+  let match = msg.match(format);
+  if (!match) return null;
+
+  return {
+    exp: `function ${match[1]}()`,
+    openGroup: true,
+  }
+}
+
+/**
+ * @param msg {string}
+ */
+const procedureDeclarationEnd = (msg) => {
+  let format = /thats it sih/
+  let match = msg.match(format);
+  if (!match) return null;
+
+  return {    
+    closeGroup: true
+  }
+}
+
+/**
+ * @param msg {string}
+ */
+const procedureCall = (msg) => {
+  let format = /call (\w+)/
+  let match = msg.match(format);
+  if (!match) return null;
+
+  return {    
+    exp: `${match[1]}();`
   }
 }
 

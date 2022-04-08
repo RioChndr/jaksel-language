@@ -1,0 +1,21 @@
+so about my_story
+    literally umur itu 21
+    spill "Umur lu " + umur
+thats it sih
+
+so about ngeloop
+    fomo i endup 10
+      kalo i lebih gede 3
+        spill "loop ke " + i
+      perhaps i itu 3
+        spill "loop ke 3 : " + (i == 3)
+      udahan
+    udahan
+thats it sih
+
+call my_story
+spill "\n"
+
+call ngeloop
+
+call my_story
