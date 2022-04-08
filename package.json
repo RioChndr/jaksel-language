@@ -1,6 +1,6 @@
 {
   "name": "jaksel-language",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Jaksel programming language",
   "main": "jaksel-interpreter.js",
   "bin": {
