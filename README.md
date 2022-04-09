@@ -11,6 +11,9 @@ npm install -g jaksel-language
 jaksel example/example1.jaksel
 ```
 
+### Table Of Content
+[TOC]
+
 ### Example 
 
 Example : 
