@@ -147,6 +147,30 @@ for (let i = 0; i < 10; i++) {
 }
 ```
 
+#### Try Catch & Exception
+
+```
+trust issue
+  spill "Something wrong"
+  toxic "Error message"
+backstab
+  spill "Catch error"
+yaudahlahya
+  spill "finish finally"
+udahan
+
+
+// transform to
+try {
+  console.log("Something wrong");
+  throw new Error("Error message");
+} catch {
+  console.log("Catch error");
+} finally {
+  console.log("finish finally");
+} 
+```
+
 #### Disclaimer
 
 This project just for fun, I don't want to hurt anyone. Just from idea "what if jaksel language is a programming language" and make it true. This project only for education purpose, not for production ready.
