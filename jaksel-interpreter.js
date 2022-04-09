@@ -41,6 +41,10 @@ function getCmd(cmdLines){
     conditionElse,
     conditionClose,
     loopFor,
+    throwError,
+    tryFn,
+    catchFn,
+    finallyFn,
   ]
 
   return cmdLines.map((line) => {
@@ -191,6 +195,51 @@ const loopFor = (msg) => {
   
   return {
     exp: `for(let ${match[1]} = 0; ${match[1]} <= ${match[2]}; ${match[1]}++)`,
+    openGroup: true
+  }
+}
+
+const throwError = (msg) => {
+  const format = /toxic (.*)/
+  const match = msg.match(format)
+  if(!match) return null;
+
+  return {
+    exp: `throw new Error(${match[1]});`
+  }
+}
+
+const tryFn = (msg) => {
+  let format = /trust issue/
+  let match = msg.match(format)
+  if(!match) return null;
+
+  return {
+    exp: `try`,
+    openGroup: true,
+  }
+}
+
+const catchFn = (msg) => {
+  let format = /backstab/
+  let match = msg.match(format)
+  if(!match) return null;
+
+  return {
+    exp: `catch`,
+    closeGroup: true,
+    openGroup: true
+  }
+}
+
+const finallyFn = (msg) => {
+  let format = /yaudahlahya/
+  let match = msg.match(format)
+  if(!match) return null;
+
+  return {
+    exp: `finally`,
+    closeGroup: true,
     openGroup: true
   }
 }
