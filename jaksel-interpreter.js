@@ -29,9 +29,9 @@ function getCmd(cmdLines){
     conditionElse,
     conditionClose,
     loopFor,
-    procedureDeclarationBegin,
-    procedureDeclarationEnd,
-    procedureCall
+    functionDeclarationBegin,
+    functionDeclarationEnd,
+    functionCall
   ]
 
   return cmdLines.map((line) => {
@@ -188,15 +188,18 @@ const loopFor = (msg) => {
 
 /**
  * @param msg {string}
- * note: procedure name must be alphabet followed by optional alphanumeric [A-Za-z0-9] or underscore (_)
+ * note: function name must be alphabet followed by optional alphanumeric [A-Za-z0-9] or underscore (_)
  */
-const procedureDeclarationBegin = (msg) => {
-  let format = /so about (\w+)/
+ const functionDeclarationBegin = (msg) => {
+  let format = /so about (\w+)((\s\w+)*)?/
   let match = msg.match(format);
   if (!match) return null;
-
+  
+  const [,funcName, paramNames] = match
+  const params = paramNames?.trim().split(/\s+/) ?? []
+  const paramsStringified = params.reduce((p, c, idx, arr) => idx !== arr.length - 1 ? `${p} ${c},` : `${p} ${c}`,'').trim();
   return {
-    exp: `function ${match[1]}()`,
+    exp: `function ${funcName}(${paramsStringified})`,
     openGroup: true,
   }
 }
@@ -204,12 +207,13 @@ const procedureDeclarationBegin = (msg) => {
 /**
  * @param msg {string}
  */
-const procedureDeclarationEnd = (msg) => {
+const functionDeclarationEnd = (msg) => {
   let format = /thats it sih/
   let match = msg.match(format);
   if (!match) return null;
 
-  return {    
+  return {
+    exp: '',    
     closeGroup: true
   }
 }
@@ -217,13 +221,18 @@ const procedureDeclarationEnd = (msg) => {
 /**
  * @param msg {string}
  */
-const procedureCall = (msg) => {
-  let format = /call (\w+)/
+const functionCall = (msg) => {
+  let format = /call (\w+)((\s\w+)*)?/
   let match = msg.match(format);
   if (!match) return null;
 
+  const [,funcName, paramValues] = match
+
+  const params = paramValues?.trim().split(/\s+/) ?? []
+  const paramsStringified = params.reduce((p, c, idx, arr) => idx !== arr.length - 1 ? `${p} ${c},` : `${p} ${c}`,'').trim();
+
   return {    
-    exp: `${match[1]}();`
+    exp: `${funcName}(${paramsStringified});`
   }
 }
 

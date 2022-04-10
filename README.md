@@ -144,7 +144,7 @@ for (let i = 0; i < 10; i++) {
 }
 ```
 
-#### Procedure/Function with no parameter
+#### Function
 ```
 so about my_story
     literally umur itu 21
@@ -152,6 +152,14 @@ so about my_story
 thats it sih
 
 call my_story
+
+so about fungsi_param_banyak a b c
+    spill "a: " + a
+    spill "b: " + b
+    spill "c: " + c
+thats it sih
+
+call fungsi_param_banyak 3 4 5
 ```
 
 #### Disclaimer

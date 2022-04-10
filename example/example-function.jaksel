@@ -3,8 +3,8 @@ so about my_story
     spill "Umur lu " + umur
 thats it sih
 
-so about ngeloop
-    fomo i endup 10
+so about ngeloop berapaKali
+    fomo i endup berapaKali
       kalo i lebih gede 3
         spill "loop ke " + i
       perhaps i itu 3
@@ -13,9 +13,18 @@ so about ngeloop
     udahan
 thats it sih
 
+so about fungsi_param_banyak a b c
+    spill "a: " + a
+    spill "b: " + b
+    spill "c: " + c
+thats it sih
+
 call my_story
 spill "\n"
 
-call ngeloop
+call ngeloop 20
+spill "\n"
 
-call my_story
+call fungsi_param_banyak 3 4 5
+spill "\n"
+
