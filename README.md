@@ -2,6 +2,20 @@
 
 Jaksel programming language is a new programming language, very modern, easy to learn, using Indonesia-slang language. No programming experience required.
 
+### Instalation & Run
+
+```bash
+npm install -g jaksel-language
+
+// run
+jaksel example/example1.jaksel
+```
+
+### Table Of Content
+[TOC]
+
+### Example 
+
 Example : 
 
 ```
@@ -35,14 +49,6 @@ fomo i endup 10
     spill "loop ke " + i
   udahan
 udahan
-```
-
-## Run
-
-Required nodejs
-
-```
-node jaksel-interpreter.js ./example/example2.jaksel
 ```
 
 ## Command
@@ -160,6 +166,29 @@ so about fungsi_param_banyak a b c
 thats it sih
 
 call fungsi_param_banyak 3 4 5
+```
+
+#### Try Catch & Exception
+```
+trust issue
+  spill "Something wrong"
+  toxic "Error message"
+backstab
+  spill "Catch error"
+yaudahlahya
+  spill "finish finally"
+udahan
+
+
+// transform to
+try {
+  console.log("Something wrong");
+  throw new Error("Error message");
+} catch {
+  console.log("Catch error");
+} finally {
+  console.log("finish finally");
+} 
 ```
 
 #### Disclaimer

@@ -1,15 +1,27 @@
 #!/usr/bin/env node
 const fs = require('fs');
 
-const inputFile = () => {
+let fileLocate = null
+const parseArgs = () => {
   const args = process.argv;
-  if (args.length < 3) throw "Require file args, ex: 'node jaksel-interpreter.js jaksel'";
-  const exist = fs.existsSync(args[2]);
-  if (!exist) throw `File "${args[2]}" tidak dapat ditemukan, silahkan periksa file kembali`;
-  return args[2];
-};
+  if (args.length < 3) {
+    console.log("Require file args, ex: 'node jaksel-interpreter.js example/example1.jaksel' or 'jaksel example/example1.jaksel'");
+    return false;
+  }
 
-const inputJaksel = fs.readFileSync(inputFile(), 'utf-8')
+  fileLocate = args[2];
+  if(!fs.existsSync(fileLocate)){
+    console.log(`File "${args[2]}" not found, please verify file location`)
+    return false;
+  }
+  return true;
+}
+
+if(!parseArgs()){
+  process.exit(1)
+}
+
+const inputJaksel = fs.readFileSync(fileLocate, 'utf-8')
 
 function flexing(input){
   let cmds = []
@@ -31,7 +43,11 @@ function getCmd(cmdLines){
     loopFor,
     functionDeclarationBegin,
     functionDeclarationEnd,
-    functionCall
+    functionCall,
+    throwError,
+    tryFn,
+    catchFn,
+    finallyFn,
   ]
 
   return cmdLines.map((line) => {
@@ -236,6 +252,52 @@ const functionCall = (msg) => {
   }
 }
 
+const throwError = (msg) => {
+  const format = /toxic (.*)/
+  const match = msg.match(format)
+  if(!match) return null;
+
+  return {
+    exp: `throw new Error(${match[1]});`
+  }
+}
+
+const tryFn = (msg) => {
+  let format = /trust issue/
+  let match = msg.match(format)
+  if(!match) return null;
+
+  return {
+    exp: `try`,
+    openGroup: true,
+  }
+}
+
+const catchFn = (msg) => {
+  let format = /backstab/
+  let match = msg.match(format)
+  if(!match) return null;
+
+  return {
+    exp: `catch`,
+    closeGroup: true,
+    openGroup: true
+  }
+}
+
+const finallyFn = (msg) => {
+  let format = /yaudahlahya/
+  let match = msg.match(format)
+  if(!match) return null;
+
+  return {
+    exp: `finally`,
+    closeGroup: true,
+    openGroup: true
+
+  }
+}
+
 const execCmd = (cmds) => {
   let resultCmds = '';
 
@@ -255,7 +317,7 @@ const execCmd = (cmds) => {
   if(isOpenGroup){
     resultCmds += ' }'
   }
-  // console.log(resultCmds)
+  
   eval(resultCmds)
 }
 
