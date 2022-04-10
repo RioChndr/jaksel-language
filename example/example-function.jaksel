@@ -13,10 +13,8 @@ so about ngeloop berapaKali
     udahan
 thats it sih
 
-so about fungsi_param_banyak a b c
+so about fungsi_param a
     spill "a: " + a
-    spill "b: " + b
-    spill "c: " + c
 thats it sih
 
 call my_story
@@ -25,6 +23,10 @@ spill "\n"
 call ngeloop 20
 spill "\n"
 
-call fungsi_param_banyak 3 4 5
+literally nama itu "adi"
+
+call fungsi_param nama
 spill "\n"
 
+call fungsi_param 3
+spill "\n"
