@@ -150,8 +150,25 @@ for (let i = 0; i < 10; i++) {
 }
 ```
 
-#### Try Catch & Exception
+#### Function
+```
+so about my_story
+    literally umur itu 21
+    spill "Umur lu " + umur
+thats it sih
 
+call my_story
+
+so about fungsi_param_banyak a b c
+    spill "a: " + a
+    spill "b: " + b
+    spill "c: " + c
+thats it sih
+
+call fungsi_param_banyak 3 4 5
+```
+
+#### Try Catch & Exception
 ```
 trust issue
   spill "Something wrong"

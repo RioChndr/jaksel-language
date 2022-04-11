@@ -41,6 +41,9 @@ function getCmd(cmdLines){
     conditionElse,
     conditionClose,
     loopFor,
+    functionDeclarationBegin,
+    functionDeclarationEnd,
+    functionCall,
     throwError,
     tryFn,
     catchFn,
@@ -199,6 +202,56 @@ const loopFor = (msg) => {
   }
 }
 
+/**
+ * @param msg {string}
+ * note: function name must be alphabet followed by optional alphanumeric [A-Za-z0-9] or underscore (_)
+ */
+ const functionDeclarationBegin = (msg) => {
+  let format = /so about (\w+)((\s\w+)*)?/
+  let match = msg.match(format);
+  if (!match) return null;
+  
+  const [,funcName, paramNames] = match
+  const params = paramNames?.trim().split(/\s+/) ?? []
+  const paramsStringified = params.reduce((p, c, idx, arr) => idx !== arr.length - 1 ? `${p} ${c},` : `${p} ${c}`,'').trim();
+  return {
+    exp: `function ${funcName}(${paramsStringified})`,
+    openGroup: true,
+  }
+}
+
+/**
+ * @param msg {string}
+ */
+const functionDeclarationEnd = (msg) => {
+  let format = /thats it sih/
+  let match = msg.match(format);
+  if (!match) return null;
+
+  return {
+    exp: '',    
+    closeGroup: true
+  }
+}
+
+/**
+ * @param msg {string}
+ */
+const functionCall = (msg) => {
+  let format = /call (\w+)((\s\w+)*)?/
+  let match = msg.match(format);
+  if (!match) return null;
+
+  const [,funcName, paramValues] = match
+
+  const params = paramValues?.trim().split(/\s+/) ?? []
+  const paramsStringified = params.reduce((p, c, idx, arr) => idx !== arr.length - 1 ? `${p} ${c},` : `${p} ${c}`,'').trim();
+
+  return {    
+    exp: `${funcName}(${paramsStringified});`
+  }
+}
+
 const throwError = (msg) => {
   const format = /toxic (.*)/
   const match = msg.match(format)
@@ -241,6 +294,7 @@ const finallyFn = (msg) => {
     exp: `finally`,
     closeGroup: true,
     openGroup: true
+
   }
 }
 
