@@ -65,6 +65,7 @@ function getCmd(cmdLines){
 
 let mapCompare = {
   'itu': ' == ',
+  'gak': ' != ',
   'lebih gede': ' > ',
   'lebih kecil': ' < ',
   'lebih gede sama dengan': ' >= ',

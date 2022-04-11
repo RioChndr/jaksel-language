@@ -128,6 +128,7 @@ if(foo > 3){
 
 Comparison : 
 - `itu`: ' == ',
+- `gak`: ' != ',
 - `lebih gede`: ' > ',
 - `lebih kecil`: ' < ',
 - `lebih gede sama dengan`: ' >= ',

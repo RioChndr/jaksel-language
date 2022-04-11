@@ -1,0 +1,17 @@
+fomo nomor endup 100
+  kalo nomor gak 0
+    literally hasil itu ""
+    seriously fizz itu nomor % 3
+    seriously buzz itu nomor % 5
+    kalo fizz itu 0
+      whichis hasil itu hasil + "fizz"
+    udahan
+    kalo buzz itu 0
+      whichis hasil itu hasil + "buzz"
+    udahan
+    kalo hasil itu ""
+      whichis hasil itu nomor
+    udahan
+    spill hasil
+  udahan
+udahan
