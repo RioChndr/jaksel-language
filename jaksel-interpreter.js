@@ -105,6 +105,7 @@ const constAssign = (msg) => {
 const valueTransform = (msg) => {
   let transforms = [
     booleanValue,
+    arrayDeclaration
   ]
 
   for (const transform of transforms) {
@@ -128,6 +129,14 @@ const booleanValue = (msg) => {
     return 'false'
   }
   return null
+}
+
+const arrayDeclaration = (msg) => {
+  let format = /circleku isinya ([^\[\]\(\)\n]+)/
+  let match = msg.match(format)
+  if(!match) return null;
+
+  return `[${match[1]}]`
 }
 
 const consoleLog = (msg) => {
@@ -318,7 +327,7 @@ const execCmd = (cmds) => {
   if(isOpenGroup){
     resultCmds += ' }'
   }
-  
+
   eval(resultCmds)
 }
 

@@ -84,6 +84,12 @@ literally foo itu negative vibes
 // let foo = false
 ```
 
+**Array**
+```
+literally circle itu circleku isinya "Susan", "Margareth", "Rani"
+// let circle = ["Susan", "Margareth", "Rani"]
+```
+
 #### Print / Console.log
 ```
 spill "Hello world"
