@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const fs = require('fs');
+const vm = require('vm');
 
 let fileLocate = null
 const parseArgs = () => {
@@ -318,8 +319,8 @@ const execCmd = (cmds) => {
   if(isOpenGroup){
     resultCmds += ' }'
   }
-  
-  eval(resultCmds)
+ 
+  vm.runInThisContext(resultCmds)
 }
 
 const result = flexing(inputJaksel)
