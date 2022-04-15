@@ -48,10 +48,13 @@ function getCmd(cmdLines){
     tryFn,
     catchFn,
     finallyFn,
+    asyncronousFunctionBegin,
+    awaitProcess
   ]
 
   return cmdLines.map((line) => {
     let cmd = null
+    
     
     for (const parse of parser) {
       cmd = parse(line)
@@ -235,6 +238,33 @@ const functionDeclarationEnd = (msg) => {
   }
 }
 
+const asyncronousFunctionBegin = (msg)=>{
+  let format = /overthinking (\w+)((\s\w+)*)?/
+  let match = msg.match(format);
+  if (!match) return null;
+
+  const [,funcName, paramNames] = match
+  const params = paramNames?.trim().split(/\s+/) ?? []
+  const paramsStringified = params.reduce((p, c, idx, arr) => idx !== arr.length - 1 ? `${p} ${c},` : `${p} ${c}`,'').trim();
+  return {
+    exp: `async function ${funcName}(${paramsStringified})`,
+    openGroup: true,
+  }
+}
+
+
+const awaitProcess = (msg) =>{
+  let format = /makesure/
+  let match = msg.match(format);
+  if (!match) return null;
+
+  return {
+    exp: `await ${valueTransform(match[3])};`
+  }
+}
+
+
+
 /**
  * @param msg {string}
  */
@@ -245,11 +275,16 @@ const functionCall = (msg) => {
 
   const [,funcName, paramValues] = match
 
-  const params = paramValues?.trim().split(/\s+/) ?? []
-  const paramsStringified = params.reduce((p, c, idx, arr) => idx !== arr.length - 1 ? `${p} ${c},` : `${p} ${c}`,'').trim();
-
-  return {    
-    exp: `${funcName}(${paramsStringified});`
+  // const params = paramValues?.trim().split(/\s+/) ?? []
+  // const paramsStringified = params.reduce((p, c, idx, arr) => idx !== arr.length - 1 ? `${p} ${c},` : `${p} ${c}`,'').trim();
+  const cmnds = msg.split(" ")
+  var cmnd = ""
+  for (let index = 2; index < cmnds.length; index++) {
+    cmnd += `${cmnds[index]}, `
+    
+  }
+  return {
+    exp: `${funcName}(${paramsStringified || msg.split(" ")[2]});`
   }
 }
 
