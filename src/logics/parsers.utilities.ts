@@ -1,13 +1,15 @@
-export const mapCompare = {
-  itu: " == ",
-  gak: " != ",
-  "lebih gede": " > ",
-  "lebih kecil": " < ",
-  "lebih gede sama dengan": " >= ",
-  "lebih kecil sama dengan": " <= ",
+export const operatorMap = {
+  ["itu"]: " == ",
+  ["gak"]: " != ",
+  ["lebih gede"]: " > ",
+  ["lebih kecil"]: " < ",
+  ["lebih gede sama dengan"]: " >= ",
+  ["lebih kecil sama dengan"]: " <= ",
 } as const;
 
-export const booleanValue = (test: string) => {
+// declare operatorReplacements function if possible
+
+export const booleanReplacement = (test: string) => {
   if (test.match(/positive vibes$/) || test.match(/worth it$/)) {
     return "true";
   } else if (test.match(/negative vibes$/)) {
@@ -17,10 +19,10 @@ export const booleanValue = (test: string) => {
   return null;
 };
 
-export const valueTransform = (test: string) => {
-  const transforms = [booleanValue];
+export const valueReplacements = (test: string) => {
+  const replacements = [booleanReplacement];
 
-  for (const transform of transforms) {
+  for (const transform of replacements) {
     const res = transform(test);
     if (res) return res;
   }

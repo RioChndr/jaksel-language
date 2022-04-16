@@ -1,6 +1,6 @@
 import type { Command } from "../logics/parsers.types";
 
-const commandsToString = (commands: Command[]) => {
+const commandsStringify = (commands: Command[]) => {
   let result = "";
 
   let isOpenGroup = false;
@@ -26,4 +26,4 @@ const commandsToString = (commands: Command[]) => {
   return result;
 };
 
-export default commandsToString;
+export default commandsStringify;

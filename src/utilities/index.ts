@@ -1,5 +1,5 @@
 import flexing from "./flexing";
-import commandsToString from "./commandsToString";
+import commandsStringify from "./commandsStringify";
 import execCommands from "./execCommands";
 
-export { flexing, commandsToString, execCommands };
+export { flexing, commandsStringify, execCommands };

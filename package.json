@@ -8,7 +8,8 @@
   },
   "scripts": {
     "build:watch": "tsc --watch",
-    "build": "tsc"
+    "build": "tsc",
+    "hello-world": "node dist/jaksel-interpreter.js examples/hello-world.jaksel"
   },
   "directories": {
     "example": "example"

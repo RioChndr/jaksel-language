@@ -1,9 +1,9 @@
 import type { Command } from "../logics/parsers.types";
 
-import commandsToString from "./commandsToString";
+import commandsStringify from "./commandsStringify";
 
 const execCommands = (cmds: Command[]) => {
-  const stringified = commandsToString(cmds);
+  const stringified = commandsStringify(cmds);
 
   // console.log(stringified); // DEV ONLY
 
