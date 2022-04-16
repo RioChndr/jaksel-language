@@ -2,21 +2,33 @@
 
 Jaksel programming language is a new programming language, very modern, easy to learn, using Indonesia-slang language. No programming experience required.
 
-### Instalation & Run
+### Instalation
 
 ```bash
+// globally
 npm install -g jaksel-language
 
-// run
+// locally
+npm install jaksel-language
+```
+
+### Run
+
+```bash
+// globally
 jaksel example/example1.jaksel
+
+// locally
+node dist/jaksel-interpreter example/example1.jaksel
 ```
 
 ### Table Of Content
+
 [TOC]
 
-### Example 
+### Example
 
-Example : 
+Example :
 
 ```
 literally umur itu 21
@@ -54,9 +66,11 @@ udahan
 ## Command
 
 Some command just like javascript, the only different is keyword and this language will translate to javascript and run as javascript. I know, this is just for fun.
+
 #### Variable
 
 Assign variable
+
 ```
 literally foo itu "hello world"
 // let foo = "hello world"
@@ -66,6 +80,7 @@ seriously foo itu 123
 ```
 
 Reassign variable
+
 ```
 whichis foo itu "hello world 2"
 // foo = "hello world 2"
@@ -85,6 +100,7 @@ literally foo itu negative vibes
 ```
 
 #### Print / Console.log
+
 ```
 spill "Hello world"
 // console.log("Hello world")
@@ -92,7 +108,6 @@ spill "Hello world"
 spill foo
 // console.log(foo)
 ```
-
 
 #### Condition
 
@@ -126,7 +141,8 @@ if(foo > 3){
 }
 ```
 
-Comparison : 
+Comparison :
+
 - `itu`: ' == ',
 - `gak`: ' != ',
 - `lebih gede`: ' > ',
@@ -152,6 +168,7 @@ for (let i = 0; i < 10; i++) {
 ```
 
 #### Function
+
 ```
 so about my_story
     literally umur itu 21
@@ -170,6 +187,7 @@ call fungsi_param_banyak 3 4 5
 ```
 
 #### Try Catch & Exception
+
 ```
 trust issue
   spill "Something wrong"
@@ -189,7 +207,7 @@ try {
   console.log("Catch error");
 } finally {
   console.log("finish finally");
-} 
+}
 ```
 
 #### Disclaimer

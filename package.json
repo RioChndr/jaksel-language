@@ -6,6 +6,10 @@
   "bin": {
     "jaksel": "./jaksel-interpreter.js"
   },
+  "scripts": {
+    "build:watch": "tsc --watch",
+    "build": "tsc"
+  },
   "directories": {
     "example": "example"
   },
@@ -18,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/RioChndr/jaksel-language/issues"
   },
-  "homepage": "https://github.com/RioChndr/jaksel-language#readme"
+  "homepage": "https://github.com/RioChndr/jaksel-language#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.24"
+  }
 }
