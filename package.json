@@ -2,9 +2,9 @@
   "name": "jaksel-language",
   "version": "1.0.2",
   "description": "Jaksel programming language",
-  "main": "jaksel-interpreter.js",
+  "main": "./dist/jaksel-interpreter.js",
   "bin": {
-    "jaksel": "./jaksel-interpreter.js"
+    "jaksel": "./dist/jaksel-interpreter.js"
   },
   "scripts": {
     "build:watch": "tsc --watch",
@@ -26,5 +26,8 @@
   "homepage": "https://github.com/RioChndr/jaksel-language#readme",
   "devDependencies": {
     "@types/node": "^17.0.24"
+  },
+  "dependencies": {
+    "commander": "^9.2.0"
   }
 }
