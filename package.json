@@ -1,0 +1,25 @@
+{
+  "name": "jaksel-language",
+  "version": "1.0.2",
+  "description": "Jaksel programming language",
+  "main": "jaksel-interpreter.js",
+  "bin": {
+    "jaksel": "./jaksel-interpreter.js"
+  },
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RioChndr/jaksel-language.git"
+  },
+  "author": "Rio Chandra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RioChndr/jaksel-language/issues"
+  },
+  "homepage": "https://github.com/RioChndr/jaksel-language#readme",
+  "dependencies": {
+    "react-icons": "^4.3.1"
+  }
+}

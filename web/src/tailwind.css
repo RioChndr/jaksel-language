@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Inter", sans-serif;
+  }
+}
+
+@layer components {
+  section.section:not(:last-child) {
+    @apply mb-20;
+  }
+}

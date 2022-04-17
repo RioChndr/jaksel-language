@@ -1,0 +1,16 @@
+literally jumlah itu 10
+spill "Jumlah: " + jumlah
+
+whichis jumlah itu 11
+spill "Jumlah: " + jumlah
+
+literally isHidup itu positive vibes
+spill "is hidup :" + isHidup
+
+fomo i endup 10
+  kalo i lebih gede 3
+    spill "loop ke " + i
+  perhaps i itu 3
+    spill "loop ke 3 : " + (i == 3)
+  udahan
+udahan

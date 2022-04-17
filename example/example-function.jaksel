@@ -1,0 +1,46 @@
+so about my_story
+    literally umur itu 21
+    spill "Umur lu " + umur
+thats it sih
+
+so about ngeloop berapaKali
+    fomo i endup berapaKali
+      kalo i lebih gede 3
+        spill "loop ke " + i
+      perhaps i itu 3
+        spill "loop ke 3 : " + (i == 3)
+      udahan
+    udahan
+thats it sih
+
+so about fungsi_param a
+    spill "a: " + a
+thats it sih
+
+so about fungsiMultiParam a b c
+    spill "a: " + a
+    spill "b: " + b
+    spill "c: " + c
+thats it sih
+
+call my_story
+spill "\n"
+
+call ngeloop 20
+spill "\n"
+
+literally nama itu "adi"
+
+call fungsi_param nama
+spill "\n"
+
+call fungsi_param 3
+spill "\n"
+
+call fungsiMultiParam 3 4 5
+spill "\n"
+
+literally nama2 itu "budi"
+
+call fungsiMultiParam nama nama2 4
+spill "\n"
