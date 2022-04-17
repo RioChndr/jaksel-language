@@ -18,8 +18,5 @@
   "bugs": {
     "url": "https://github.com/RioChndr/jaksel-language/issues"
   },
-  "homepage": "https://github.com/RioChndr/jaksel-language#readme",
-  "dependencies": {
-    "react-icons": "^4.3.1"
-  }
+  "homepage": "https://github.com/RioChndr/jaksel-language#readme"
 }
