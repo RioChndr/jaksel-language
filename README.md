@@ -93,6 +93,26 @@ spill foo
 // console.log(foo)
 ```
 
+#### Comment
+```
+IMO ini tuh ga penting
+// // ini tuh ga penting
+
+FYI ini juga komen
+// // ini juga komen
+```
+
+#### Increment/Decrement
+```
+literally circle itu 0
+// let circle = 0
+
+circle toxic
+// circle--
+
+circle healthy
+// circle++
+```
 
 #### Condition
 
