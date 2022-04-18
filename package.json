@@ -6,6 +6,9 @@
   "bin": {
     "jaksel": "./jaksel-interpreter.js"
   },
+  "scripts": {
+    "test": "jest"
+  },
   "directories": {
     "example": "example"
   },
@@ -21,5 +24,8 @@
   "homepage": "https://github.com/RioChndr/jaksel-language#readme",
   "devDependencies": {
     "jest": "^27.5.1"
+  },
+  "dependencies": {
+    "commander": "^9.2.0"
   }
 }

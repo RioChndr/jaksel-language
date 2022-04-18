@@ -1,32 +1,65 @@
 #!/usr/bin/env node
-const fs = require("fs");
-const { flexing, execCmd } = require("./lib/utils");
+const path = require("path");
+const vm = require("vm");
+const fsAsync = require("fs/promises");
 
-let fileLocate = null;
-const parseArgs = () => {
-  const args = process.argv;
+const { Command } = require("commander");
 
-  if (args.length < 3) {
-    console.log(
-      "Require file args, ex: 'node jaksel-interpreter.js example/example1.jaksel' or 'jaksel example/example1.jaksel'"
-    );
-    return false;
+const { flexing, commandsStringify } = require("./lib/utils");
+
+const isJakselFile = (file) => path.extname(file) === ".jaksel";
+
+const readJakselFile = async (file) => {
+  try {
+    await fsAsync.access(file);
+  } catch (error) {
+    throw new Error(`File "${file}" not found, make sure file exist`);
   }
 
-  fileLocate = args[2];
-  if (!fs.existsSync(fileLocate)) {
-    console.log(`File "${args[2]}" not found, please verify file location`);
-    return false;
+  if (!isJakselFile(file)) {
+    throw new Error(`Unsupported file format`);
   }
 
-  return true;
+  return await fsAsync.readFile(file, "utf-8");
 };
 
-if (!parseArgs()) {
-  process.exit(1);
-}
+const cli = new Command("jaksel-language")
+  .version("1.0.2")
+  .argument("<files...>")
+  .option("-d, --debug", "Debug")
+  .action(async (files, options) => {
+    if (Array.isArray(files)) {
+      const moreThanOne = files.length > 1;
 
-const inputJaksel = fs.readFileSync(fileLocate, "utf-8");
+      const divider = "=".repeat(96);
 
-const result = flexing(inputJaksel);
-execCmd(result);
+      for (const file of files) {
+        try {
+          const data = await readJakselFile(file);
+
+          const stringified = commandsStringify(flexing(data)).trim();
+
+          if (options?.debug) {
+            console.log(`\nSOURCE: ${file}`);
+            console.log(data);
+
+            console.log("\nCOMPILED:");
+            console.log(stringified);
+
+            console.log("\nRUN:");
+            vm.runInThisContext(stringified);
+          } else {
+            moreThanOne && console.log(`\nSOURCE: ${file}`);
+            vm.runInThisContext(stringified);
+          }
+
+          moreThanOne && console.log("\n" + divider);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    }
+  })
+  .showHelpAfterError();
+
+cli.parse(process.argv);
