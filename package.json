@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/RioChndr/jaksel-language/issues"
   },
-  "homepage": "https://github.com/RioChndr/jaksel-language#readme"
+  "homepage": "https://github.com/RioChndr/jaksel-language#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
 }
