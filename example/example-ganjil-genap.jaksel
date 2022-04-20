@@ -1,0 +1,12 @@
+literally bilanganAkhir itu 10
+
+fomo i endup bilanganAkhir
+    literally cekGenap itu i%2
+    kalo i lebih gede 0
+        kalo cekGenap itu 0
+            spill "Bilangan "+i+" - Genap"
+        kalogak
+            spill "Bilangan "+i+" - Ganjil" 
+        udahan
+    udahan
+udahan
