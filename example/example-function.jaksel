@@ -18,9 +18,9 @@ so about fungsi_param a
 thats it sih
 
 so about fungsiMultiParam a b c
-    spill "a: " + a
-    spill "b: " + b
-    spill "c: " + c
+    spill "argumen pertama: " + a
+    spill "argumen kedua: " + b
+    spill "argumen ketiga: " + c
 thats it sih
 
 call my_story
@@ -34,6 +34,9 @@ literally nama itu "adi"
 call fungsi_param nama
 spill "\n"
 
+call fungsi_param "Rayhan"
+spill "\n"
+
 call fungsi_param 3
 spill "\n"
 
@@ -42,5 +45,5 @@ spill "\n"
 
 literally nama2 itu "budi"
 
-call fungsiMultiParam nama nama2 4
+call fungsiMultiParam 2 nama2 "and then Romeo says \"I love you\" to Juliet"
 spill "\n"
