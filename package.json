@@ -6,6 +6,9 @@
   "bin": {
     "jaksel": "./jaksel-interpreter.js"
   },
+  "scripts": {
+    "test": "jest"
+  },
   "directories": {
     "example": "example"
   },
