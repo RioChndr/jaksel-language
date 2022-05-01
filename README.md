@@ -7,9 +7,11 @@ Thank you for all your contributions, share, star, and everything.
 ## Instalation & Run
 
 Install from npm
+
 ```bash
 npm install -g jaksel-language
 ```
+
 Or Clone this repository
 
 ```bash
@@ -18,33 +20,48 @@ git clone https://github.com/RioChndr/jaksel-language.git
 
 ### Run
 
-If you install from npm, run jaksel script using `jaksel` command
+If you install from npm, run jaksel script using `jaksel -r <filename...>` command
 
 ```bash
-jaksel example/example1.jaksel
+jaksel -r example/example1.jaksel
 ```
 
 Or run from this repository
+
 ```
-node jaksel-interpreter.js example/example1.jaksel
+node jaksel-interpreter.js -r example/example1.jaksel
+```
+
+### Compile
+
+If you install from npm, compile jaksel script using `jaksel -c <filename...>` command
+
+```bash
+jaksel -c example/example1.jaksel
+```
+
+Or run from this repository
+
+```
+node jaksel-interpreter.js -c example/example1.jaksel
 ```
 
 ## Table Of Content
 
-* [Jaksel Script](#jaksel-script)
-   * [Instalation &amp; Run](#instalation--run)
-   * [Table Of Content](#table-of-content)
-   * [Example](#example)
-   * [Command](#command)
-  * [Disclaimer](#disclaimer)
-   * [Showcase](#showcase)
-      * [Highlight Text Editor](#highlight-text-editor)
+- [Jaksel Script](#jaksel-script)
+  - [Instalation &amp; Run](#instalation--run)
+  - [Table Of Content](#table-of-content)
+  - [Example](#example)
+  - [Command](#command)
+  - [Disclaimer](#disclaimer)
+  - [Showcase](#showcase)
+    - [Highlight Text Editor](#highlight-text-editor)
 
 [github-markdown-toc](https://github.com/ekalinin/github-markdown-toc)
 
-## Example 
+## Example
 
-Example : 
+Example :
 
 ```
 literally umur itu 21
@@ -94,4 +111,5 @@ This project just for fun, I don't want to hurt anyone. Just from idea "what if 
 Some cool project from you, submit your project like highlight text, jaksel-to-js, etc. Make PR link to your repo !. Don't limit your creativity
 
 ### Highlight Text Editor
+
 - [vim-jaksel](https://github.com/cocatrip/vim-jaksel) jaksel programming language plugin for (n)vim
