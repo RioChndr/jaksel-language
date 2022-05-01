@@ -1,8 +1,8 @@
-const { cmdToJs, flexing } = require('../../lib/utils')
+const { commandStringify, parsing } = require("../../lib/utils");
 
-const getJsFormat = (input) => {  
-  const cmd = flexing(input)
-  return cmdToJs(cmd)
-}
+const getJsFormat = (input) => {
+  const cmd = parsing(input);
+  return commandStringify(cmd);
+};
 
-module.exports = getJsFormat
+module.exports = getJsFormat;
