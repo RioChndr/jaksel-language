@@ -133,7 +133,7 @@ udahan
 
 Some syntax just like javascript, the only different is keyword and this language will translate to javascript and run as javascript. I know, this is just for fun.
 
-- [List Syntax](Command.md)
+- [List Jaksel Script syntax](Command.md)
 
 ### Disclaimer
 
