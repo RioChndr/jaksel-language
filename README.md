@@ -4,7 +4,7 @@ Jaksel Script is a new programming language, very modern, easy to learn, using I
 
 Thank you for all your contributions, share, star, and everything.
 
-## Instalation & Run
+## Instalation
 
 Install from npm
 
@@ -18,9 +18,13 @@ Or Clone this repository
 git clone https://github.com/RioChndr/jaksel-language.git
 ```
 
+## Command
+
 ### Run
 
-If you install from npm, run jaksel script using `jaksel -r <filename...>` command
+you can run Jaksel File in terminal using `jaksel -r <filename...>` command
+
+Run from NPM
 
 ```bash
 jaksel -r example/example1.jaksel
@@ -28,13 +32,15 @@ jaksel -r example/example1.jaksel
 
 Or run from this repository
 
-```
+```bash
 node jaksel-interpreter.js -r example/example1.jaksel
 ```
 
 ### Compile
 
-If you install from npm, compile jaksel script using `jaksel -c <filename...>` command
+you can compile Jaksel File to Javascript File using `jaksel -c <filename...>` command
+
+Compile from NPM
 
 ```bash
 jaksel -c example/example1.jaksel
@@ -42,17 +48,44 @@ jaksel -c example/example1.jaksel
 
 Or run from this repository
 
-```
+```bash
 node jaksel-interpreter.js -c example/example1.jaksel
+```
+
+Example Output (`example1.jaksel` to `example1.js`)
+
+```js
+let umur = 21;
+console.log("Umur lu " + umur);
+if (umur > 20) {
+  console.log("Elu tua");
+  let umurgua = umur + 10;
+  console.log("Kalo gua umurnya " + umurgua);
+  if (umurgua > 30) {
+    console.log("gua lebih tua");
+  }
+} else {
+  console.log("dasar bocil");
+}
+console.log("Udahan ah");
+```
+
+_Note: you can Run or Compile multiple file, split by space_
+
+_Example_
+
+```bash
+jaksel -r example/example1.jaksel example/example2.jaksel
 ```
 
 ## Table Of Content
 
 - [Jaksel Script](#jaksel-script)
-  - [Instalation &amp; Run](#instalation--run)
+  - [Instalation](#instalation)
+  - [Command](#command)
   - [Table Of Content](#table-of-content)
   - [Example](#example)
-  - [Command](#command)
+  - [Syntax](#syntax)
   - [Disclaimer](#disclaimer)
   - [Showcase](#showcase)
     - [Highlight Text Editor](#highlight-text-editor)
@@ -96,11 +129,11 @@ fomo i endup 10
 udahan
 ```
 
-### Command
+### Syntax
 
-Some command just like javascript, the only different is keyword and this language will translate to javascript and run as javascript. I know, this is just for fun.
+Some syntax just like javascript, the only different is keyword and this language will translate to javascript and run as javascript. I know, this is just for fun.
 
-- [List Command](Command.md)
+- [List Syntax](Command.md)
 
 ### Disclaimer
 
