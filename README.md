@@ -4,6 +4,22 @@ Jaksel Script is a new programming language, very modern, easy to learn, using I
 
 Thank you for all your contributions, share, star, and everything.
 
+## Table Of Content
+
+- [Jaksel Script](#jaksel-script)
+  - [Table Of Content](#table-of-content)
+  - [Instalation](#instalation)
+  - [Command](#command)
+  - [Example](#example)
+  - [Syntax](#syntax)
+  - [Disclaimer](#disclaimer)
+  - [Showcase](#showcase)
+    - [Highlight Text Editor](#highlight-text-editor)
+
+[github-markdown-toc](https://github.com/ekalinin/github-markdown-toc)
+
+
+
 ## Instalation
 
 Install from npm
@@ -70,28 +86,13 @@ if (umur > 20) {
 console.log("Udahan ah");
 ```
 
-_Note: you can Run or Compile multiple file, split by space_
+**Note**: _you can Run or Compile multiple file, split by space_
 
 _Example_
 
 ```bash
 jaksel -r example/example1.jaksel example/example2.jaksel
 ```
-
-## Table Of Content
-
-- [Jaksel Script](#jaksel-script)
-  - [Instalation](#instalation)
-  - [Command](#command)
-  - [Table Of Content](#table-of-content)
-  - [Example](#example)
-  - [Syntax](#syntax)
-  - [Disclaimer](#disclaimer)
-  - [Showcase](#showcase)
-    - [Highlight Text Editor](#highlight-text-editor)
-
-[github-markdown-toc](https://github.com/ekalinin/github-markdown-toc)
-
 ## Example
 
 Example :
