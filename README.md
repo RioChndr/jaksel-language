@@ -95,3 +95,4 @@ Some cool project from you, submit your project like highlight text, jaksel-to-j
 
 ### Highlight Text Editor
 - [vim-jaksel](https://github.com/cocatrip/vim-jaksel) jaksel programming language plugin for (n)vim
+- [vscode-jaksel-language-support](https://github.com/ngupuk/vscode-jaksel-language-support) visual studio code extension for syntax highlighting, code snippet, and auto formatting
