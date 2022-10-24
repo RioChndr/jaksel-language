@@ -83,6 +83,7 @@ Comparison :
 
 ### Loop
 
+#### **`For` loop**:
 ```
 fomo i endup 10
   kalo i lebih gede 3
@@ -96,6 +97,27 @@ for (let i = 0; i < 10; i++) {
     console.log("loop ke " + i);
   }
 }
+```
+
+#### **`For of` loop**:
+```
+fomo semua foo dari bar
+  spill foo
+udahan
+
+// transform to
+for (const foo of bar) {
+  console.log(foo);
+}
+```
+
+#### **`break`** and **`continue`**:
+```
+stop
+// break;
+
+skip
+// continue;
 ```
 
 ### Function
