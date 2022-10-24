@@ -85,15 +85,31 @@ Comparison :
 
 ```
 fomo i endup 10
+  kalo i itu 4
+    spill "continue"
+    skip
+  udahan
   kalo i lebih gede 3
     spill "loop ke " + i
+  udahan
+  kalo i itu 8
+    spill "break"
+    stop
   udahan
 udahan
 
 // transform to
 for (let i = 0; i < 10; i++) {
+  if (i == 4){
+    console.log("continue");
+    continue;
+  }
   if (i > 3){
     console.log("loop ke " + i);
+  }
+  if (i == 8){
+    console.log("break");
+    break;
   }
 }
 ```
