@@ -19,9 +19,13 @@ import functionDeclarationAsyncBegin from './parser/functionDeclarationAsyncBegi
 import awaitProcess from './parser/awaitProcess';
 import breakStatement from './parser/break';
 import continueStatement from './parser/continue';
-
+interface IParser {
+  (msg: string): {
+    exp: string;
+  };
+}
 export default function getCmd(cmdLines: string[]) {
-  const parser = [
+  const parser: IParser[] = [
     varAssign,
     varReassign,
     constAssign,

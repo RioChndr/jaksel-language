@@ -1,4 +1,4 @@
-const booleanValue = (msg) => {
+const booleanValue = (msg: string) => {
   if (msg.match(/positive vibes$/) || msg.match(/worth it$/)) {
     return 'true';
   } else if (msg.match(/negative vibes$/)) {
@@ -8,7 +8,7 @@ const booleanValue = (msg) => {
   return null;
 };
 
-export default function valueTransform(msg) {
+export default function valueTransform(msg: string) {
   const transforms = [booleanValue];
 
   for (const transform of transforms) {

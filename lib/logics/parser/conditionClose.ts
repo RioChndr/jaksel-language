@@ -1,4 +1,4 @@
-export default function conditionClose(msg) {
+export default function conditionClose(msg: string) {
   const format = /udahan$/;
   const match = msg.match(format);
   if (!match) return null;

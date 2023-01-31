@@ -1,4 +1,4 @@
-export default function tryFn(msg) {
+export default function tryFn(msg: string) {
   const format = /trust issue/;
   const match = msg.match(format);
   if (!match) return null;

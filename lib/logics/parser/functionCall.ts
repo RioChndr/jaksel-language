@@ -1,7 +1,7 @@
 /**
  * @param msg {string}
  */
-export default function functionCall(msg) {
+export default function functionCall(msg: string) {
   const format = /call (\w+)((\s(\w+|".*"))*)/;
   const match = msg.match(format);
   if (!match) return null;

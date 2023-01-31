@@ -1,4 +1,4 @@
-export default function loopForOf(msg) {
+export default function loopForOf(msg: string) {
   const format =
     /fomo semua ([a-zA-Z]+[a-zA-Z0-9]*) dari ([a-zA-Z]+[a-zA-Z0-9]*)/;
   const match = msg.match(format);

@@ -2,7 +2,7 @@
  * @param msg {string}
  * note: function name must be alphabet followed by optional alphanumeric [A-Za-z0-9] or underscore (_)
  */
-export default function functionDeclarationBegin(msg) {
+export default function functionDeclarationBegin(msg: string) {
   const format = /so about (\w+)((\s\w+)*)?/;
   const match = msg.match(format);
   if (!match) return null;

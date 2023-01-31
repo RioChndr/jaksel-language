@@ -1,5 +1,5 @@
 import valueTransform from '../../utils/valueTransform';
-export default function varReassign(msg) {
+export default function varReassign(msg: string) {
   const format = /whichis ([a-zA-Z_]+[a-zA-Z0-9_]*) itu ([^()[\]\n]+)/;
   const match = msg.match(format);
   if (!match) return null;

@@ -1,6 +1,10 @@
 import * as vm from 'vm';
-
-export function cmdToTs(cmds: any) {
+interface ICmd {
+  exp: string;
+  closeGroup?: boolean;
+  openGroup?: boolean;
+}
+export function cmdToTs(cmds: ICmd[]) {
   let resultCmds = '';
 
   let isOpenGroup = false;
@@ -23,7 +27,7 @@ export function cmdToTs(cmds: any) {
   return resultCmds;
 }
 
-export function execCmd(cmds: any) {
+export function execCmd(cmds: ICmd[]) {
   const resultCmds = cmdToTs(cmds);
   vm.runInThisContext(resultCmds);
 }

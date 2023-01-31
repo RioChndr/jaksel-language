@@ -1,6 +1,6 @@
 import valueTransform from '../../utils/valueTransform';
 
-export default function awaitProcess(msg) {
+export default function awaitProcess(msg: string) {
   const format = /makesure/;
   const match = msg.match(format);
   if (!match) return null;

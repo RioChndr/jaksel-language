@@ -1,4 +1,4 @@
-export default function catchFn(msg) {
+export default function catchFn(msg: string) {
   const format = /backstab/;
   const match = msg.match(format);
   if (!match) return null;

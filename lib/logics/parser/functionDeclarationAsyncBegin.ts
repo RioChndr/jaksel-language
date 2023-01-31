@@ -2,7 +2,7 @@
  * @param msg {string}
  * note: function name must be alphabet followed by optional alphanumeric [A-Za-z0-9] or underscore (_)
  */
-export default function functionDeclarationAsyncBegin(msg) {
+export default function functionDeclarationAsyncBegin(msg: string) {
   const format = /overthinking (\w+)((\s\w+)*)?/;
   const match = msg.match(format);
   if (!match) return null;

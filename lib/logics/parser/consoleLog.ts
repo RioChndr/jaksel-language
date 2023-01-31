@@ -1,4 +1,4 @@
-export default function consoleLog(msg) {
+export default function consoleLog(msg: string) {
   const format = /spill (.*)/;
   const match = msg.match(format);
   if (!match) return null;

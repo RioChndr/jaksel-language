@@ -1,4 +1,4 @@
-export default function loopFor(msg) {
+export default function loopFor(msg: string) {
   const format = /fomo ([a-zA-Z0-9]+) endup ([a-zA-Z0-9]+)/;
   const match = msg.match(format);
   if (!match) return null;

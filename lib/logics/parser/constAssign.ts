@@ -1,6 +1,6 @@
 import valueTransform from '../../utils/valueTransform';
 
-export default function constAssign(msg) {
+export default function constAssign(msg: string) {
   const format = /seriously ([a-zA-Z_]+[a-zA-Z0-9_]*) itu ([^()[\]\n]+)/;
   const match = msg.match(format);
   if (!match) return null;
