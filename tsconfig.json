@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "module": "CommonJS",
+    "target": "ES2020",
+    "esModuleInterop": true
+  }
+}
