@@ -1,0 +1,96 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "jaksel",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#variabel_type"
+		},
+		{
+			"include": "#variabel"
+		},
+		{
+			"include": "#function"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#operators"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.jaksel",
+					"begin": "//",
+					"end": "\\n"
+				},
+				{
+					"name": "comment.block.jaksel",
+					"begin": "/\\*",
+					"end": "\\*/"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.jaksel",
+					"match": "\\b(kalo|kalogak|udahan|fomo|endup|stop|skip|overthinking|spill|so about|thats it sih|call|trust issue|backstab|yaudahlahya)\\b"
+				}
+			]
+		},
+		"variabel_type": {
+			"patterns": [
+				{
+					"name": "support.type.jaksel",
+					"match": "\\literally|seriously|whichis|positive vibes|worth it|negative vibes"
+				}
+			]
+		},
+		"variabel": {
+			"patterns": [
+				{
+					"name": "variable",
+					"match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+				}
+			]
+		},
+
+		"functions": {
+			"patterns": [
+				{
+					"name": "support.function.jaksel",
+					"match": "(?i)\\b(semua|dari)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.jaksel",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"match": "(\\\\(r|n|t)|\\\\[0-9a-fA-F][0-9a-fA-F])",
+					"name": "constant.character.escape.jaksel"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "variable.language.jaksel",
+					"match": "\\b(itu|gak|lebih gede|lebih kecil|lebih gede sama dengan|lebih kecil sama dengan)\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.jaksel"
+}

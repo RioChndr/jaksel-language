@@ -1,0 +1,97 @@
+{
+    "new file": {
+        "prefix": "new file",
+        "body": [
+            "welcome jaksel language"
+        ]
+    },
+
+    "literally": {
+        "prefix": "literally",
+        "body": [
+            "literally ${1:name} itu ${2:value} "
+        ]
+    },
+
+    "seriously": {
+        "prefix": "seriously",
+        "body": [
+            "seriously ${1:name} itu ${2:value} "
+        ]
+    },
+
+    "whichis": {
+        "prefix": "whichis",
+        "body": [
+            "whichis ${1:name} itu ${2:value} "
+        ]
+    },
+
+    "spill": {
+        "prefix": "spill",
+        "body": [
+            "spill ${1:value}"
+        ]
+    },
+
+
+    "kalo": {
+        "prefix": "kalo",
+        "body": [
+            "kalo ${1:condition} ${2:comparison} ${3:condition}",
+            "\t$0",
+            "udahan"
+        ]
+    },
+
+    "kalogak": {
+        "prefix": "kalogak",
+        "body": [
+            "kalogak",
+            "\t$0",
+            "udahan"
+        ]
+    },
+
+    "fomo": {
+        "prefix": "fomo",
+        "body": [
+            "fomo semua ${1:variabel} dari ${2:value}",
+            "\t$0// loop here",
+            "udahan"
+        ]
+    },
+
+    "so": {
+        "prefix": "so",
+        "body": [
+            "so about ${1:functionName}",
+            "\t$0// function here",
+            "thats it sih"
+        ]
+    },
+
+    "overthinking": {
+        "prefix": "overthinking",
+        "body": [
+            "overthinking ${1:functionName}",
+            "\t$0// function here",
+            "thats it sih"
+        ]
+    },
+
+    "trust": {
+        "prefix": "trust",
+        "body": [
+            "trust issue",
+            "\t$0// Something wrong",
+            "\t$0// Error message",
+            "backstab",
+            "\t$0// Catch error",
+            "yaudahlahya",
+            "\t$0// finish finally",
+            "udahan"
+        ]
+    }
+
+}

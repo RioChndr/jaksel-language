@@ -1,0 +1,42 @@
+{
+  "name": "jaksel",
+  "displayName": "jaksel",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.83.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Themes"
+  ],
+  "icon": "./icon.jpg",
+  "contributes": {
+    "languages": [{
+      "id": "jaksel",
+      "aliases": ["jaksel", "jaksel"],
+      "extensions": [".jaksel"],
+      "configuration": "./language-configuration.json",
+      "icon": {
+        "light": "./icon.jpg",
+        "dark": "./icon.jpg"
+      }
+    }],
+    "grammars": [{
+      "language": "jaksel",
+      "scopeName": "source.jaksel",
+      "path": "./syntaxes/jaksel.tmLanguage.json"
+    }],
+    "iconThemes": [
+      {
+        "id": "jaksel",
+        "label": "jaksel",
+        "path": "./icons"
+      }
+    ],
+    "snippets": [{
+      "language": "jaksel",
+      "path": "./snippets/jaksel.json"
+  }]
+  }
+}
