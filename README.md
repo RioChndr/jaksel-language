@@ -1,3 +1,9 @@
+## (人◕‿◕) 𝕒𝕣𝕔𝕙𝕚𝕖𝕧𝕖𝕕 (•◡•)
+
+This project archived!, You still can clone/fork if you want to build for your own. I do this because no further feature and this project only just for fun. Thanks for all your support!
+
+---
+
 # Jaksel Script
 
 Jaksel Script is a new programming language, very modern, easy to learn, using Indonesia-slang language. No programming experience required.
