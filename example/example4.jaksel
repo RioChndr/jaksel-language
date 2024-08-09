@@ -1,0 +1,5 @@
+whichis foo itu start from "jujurly","gue","rasa","ini","string",1,false,true
+whichis bar itu start from 1,2,3,4,5
+spill foo[0]
+spill foo[1]
+spill foo
